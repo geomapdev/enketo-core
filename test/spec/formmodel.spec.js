@@ -165,8 +165,6 @@ describe( 'Data node XML data type', function() {
         [ '14', 'string', true ],
         [ 1, 'string', true, '1' ],
 
-
-
         [ 'val4', 'int', false, '' ],
         [ '2', 'int', true ],
         [ 3, 'int', true, '3' ],
@@ -194,7 +192,8 @@ describe( 'Data node XML data type', function() {
         [ '2012-12-32T00:00:00-06', 'datetime', false, '2012-12-32T00:00:00-06:00' ], //?
         [ '2012-12-31T23:59:59-06', 'datetime', true, '2012-12-31T23:59:59-06:00' ],
         [ '2012-12-31T23:59:59-06:30', 'datetime', true ],
-        [ '2012-12-31T23:59:59Z', 'datetime', true, '2012-12-31T16:59:59.000-07:00' ],
+        // the test below is dependent on OS time zone of test machine
+        //[ '2012-12-31T23:59:59Z', 'datetime', true, '2012-12-31T16:59:59.000-07:00' ],
         [ '2012-01-01T30:00:00-06', 'datetime', false, '2012-01-01T30:00:00-06:00' ],
         //['2013-05-31T07:00-02', 'datetime', true],fails in phantomJSs
 

@@ -721,6 +721,7 @@ define( function( require, exports, module ) {
 
                     if ( type === 'file' ) {
                         $inputNodes.eq( 0 ).attr( 'data-loaded-file-name', value );
+			$inputNodes.eq( 0 ).attr( 'data-loaded-url', value );
                         // console.error('Cannot set value of file input field (value: '+value+'). If trying to load '+
                         //  'this record for editing this file input field will remain unchanged.');
                         return false;

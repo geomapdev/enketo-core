@@ -44,6 +44,8 @@ define( function( require, exports, module ) {
     Filepicker.prototype._init = function() {
         var $input = $( this.element );
         var existingFileName = $input.attr( 'data-loaded-file-name' );
+	var existingFileUrl = $input.attr( 'data-loaded-url' );
+
         var that = this;
 
         this.props = this._getProps();
@@ -84,7 +86,9 @@ define( function( require, exports, module ) {
                 that._showFeedback();
                 that._changeListener();
                 $input.prop( 'disabled', false );
-                if ( existingFileName ) {
+		if ( existingFileUrl ) {
+		    that._showPreview( existingFileUrl, that.props.mediaType );
+		} else if ( existingFileName ) {
                     fileManager.getFileUrl( existingFileName )
                         .then( function( url ) {
                             that._showPreview( url, that.props.mediaType );

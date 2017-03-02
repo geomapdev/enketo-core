@@ -56,7 +56,6 @@ define( function( require, exports, module ) {
         var repeatsPresent;
         var replaceChoiceNameFn;
         var loadErrors = [];
-	this.data = data;
 
         /**
          * Function: init
@@ -724,10 +723,10 @@ define( function( require, exports, module ) {
                         $inputNodes.eq( 0 ).attr( 'data-loaded-file-name', value );
 			
 			if (model.data && model.data.instanceAttachments){
-			    var fileurl = this.data.instanceAttachments[value];
-			    if (fileurl) { 
-				$inputNodes.eq( 0 ).attr( 'data-loaded-url', fileurl);
-			    }
+			    //var fileurl = this.data.instanceAttachments[value];
+			    //if (fileurl) { 
+				$inputNodes.eq( 0 ).attr( 'data-loaded-url', JSON.stringify(model.data.instanceAttachments));
+			    //}
 			    //$inputNodes.eq( 0 ).attr( 'data-loaded-url', 'https:\/\/kobocat1.swcacloud.com\/media\/dreinhart\/attachments\/047f677e98124844bad21bc57b85b98b\/6515b497-4e55-4ae6-9b7b-e0adc5a9b10e\/swcalogo-14_40_52-medium.jpg' );
                         }
 			// console.error('Cannot set value of file input field (value: '+value+'). If trying to load '+

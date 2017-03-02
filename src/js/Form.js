@@ -56,6 +56,7 @@ define( function( require, exports, module ) {
         var repeatsPresent;
         var replaceChoiceNameFn;
         var loadErrors = [];
+	this.data = data;
 
         /**
          * Function: init

@@ -723,9 +723,9 @@ define( function( require, exports, module ) {
                         $inputNodes.eq( 0 ).attr( 'data-loaded-file-name', value );
 
 			if (model.data && model.data.instanceAttachments){
-			    var att = JSON.parse(JSON.stringify(model.data.instanceAttachments));
-			    if (att[value]) {
-				$inputNodes.eq( 0 ).attr( 'data-loaded-url', att[value]);
+			    //var att = JSON.parse(JSON.stringify(model.data.instanceAttachments));
+			    if (model.data.instanceAttachments[value]) {
+				$inputNodes.eq( 0 ).attr( 'data-loaded-url', model.data.instanceAttachments[value]);
 			    }
 			    //$inputNodes.eq( 0 ).attr( 'data-loaded-url', 'https:\/\/kobocat1.swcacloud.com\/media\/dreinhart\/attachments\/047f677e98124844bad21bc57b85b98b\/6515b497-4e55-4ae6-9b7b-e0adc5a9b10e\/swcalogo-14_40_52-medium.jpg' );
                         }

@@ -722,12 +722,13 @@ define( function( require, exports, module ) {
 
                     if ( type === 'file' ) {
                         $inputNodes.eq( 0 ).attr( 'data-loaded-file-name', value );
-			if ((typeof(this.data.instanceAttachments) !== 'undefined') && (value in this.data.instanceAttachments)){
-			    var fileurl = this.data.instanceAttachments[value];
-			    $inputNodes.eq( 0 ).attr( 'data-loaded-url', fileurl);
-			}
-			//$inputNodes.eq( 0 ).attr( 'data-loaded-url', 'https:\/\/kobocat1.swcacloud.com\/media\/dreinhart\/attachments\/047f677e98124844bad21bc57b85b98b\/6515b497-4e55-4ae6-9b7b-e0adc5a9b10e\/swcalogo-14_40_52-medium.jpg' );
-                        
+			var model = this.getModel();
+			if (('data' in model) && ('instanceAttachments' in model.data)){
+			    //var fileurl = this.data.instanceAttachments[value];
+			   //$inputNodes.eq( 0 ).attr( 'data-loaded-url', fileurl);
+			//}
+			  $inputNodes.eq( 0 ).attr( 'data-loaded-url', 'https:\/\/kobocat1.swcacloud.com\/media\/dreinhart\/attachments\/047f677e98124844bad21bc57b85b98b\/6515b497-4e55-4ae6-9b7b-e0adc5a9b10e\/swcalogo-14_40_52-medium.jpg' );
+                        }
 			// console.error('Cannot set value of file input field (value: '+value+'). If trying to load '+
                         //  'this record for editing this file input field will remain unchanged.');
                         return false;

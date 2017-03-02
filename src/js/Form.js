@@ -722,8 +722,8 @@ define( function( require, exports, module ) {
 
                     if ( type === 'file' ) {
                         $inputNodes.eq( 0 ).attr( 'data-loaded-file-name', value );
-			var model = this.getModel();
-			if (('data' in model) && ('instanceAttachments' in model.data)){
+			
+			if (model.data && model.data.instanceAttachments){
 			    //var fileurl = this.data.instanceAttachments[value];
 			   //$inputNodes.eq( 0 ).attr( 'data-loaded-url', fileurl);
 			//}

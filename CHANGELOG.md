@@ -3,10 +3,30 @@ Change Log
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-[Unreleased] 
+[4.24.1] - 2017-03-02
+---------------------
+##### Fixed
+- Widgets in cloned repeats not re-initialized.
+
+[4.24.0] - 2017-03-02
+---------------------
+##### Added
+- Support for truly dynamic repeat count (jr:count attribute).
+
+##### Fixed
+- Select desktop picker options cannot be selected by pressing spacebar.
+- Accessibility issue with file input picker (tab traversal, focus).
+
+[4.23.0] - 2017-03-01
+---------------------
+##### Added
+- Autocomplete widget for all browser except: Safari and all browsers on iOS.
+
+[4.22.2] - 2017-02-23 
 ---------------------
 ##### Fixed
 - jr:choice-name() inside a repeat produces incorrect results.
+- Media labels in itemsets are not shown.
 
 [4.22.1] - 2017-02-21
 ---------------------
